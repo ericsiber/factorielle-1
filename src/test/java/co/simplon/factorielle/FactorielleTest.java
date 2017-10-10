@@ -6,6 +6,19 @@ import org.junit.Test;
 
 public class FactorielleTest {
 
+	@Test(timeout = 1)
+	public void factorielle_de_18_doit_s_executer_en_100_iterations_en_moins_de_1_ms() {
+		// GIVEN
+		long n = 18;
+		Factorielle factorielle = new Factorielle();
+		
+		// WHEN
+		for (int i=0; i< 100; i++)
+			factorielle.calculer(n);
+	
+		// THEN
+	}
+	
 	@Test(expected = IllegalArgumentException.class)
 	public void factorielle_de_moins_1_doit_renvoyer_une_exception() {
 		// GIVEN
