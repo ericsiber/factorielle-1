@@ -1,14 +1,24 @@
 package co.simplon.factorielle;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 public class FactorielleTest {
 
+	@Test(expected = IllegalArgumentException.class)
+	public void factorielle_de_moins_1_doit_renvoyer_une_exception() {
+		// GIVEN
+		long n = -1;
+		Factorielle factorielle = new Factorielle();
+		
+		// WHEN
+		factorielle.calculer(n);
+	
+		// THEN
+	}
+	
 	@Test
-	@Ignore
 	public void factorielle_de_0_doit_renvoyer_1() {
 		// GIVEN
 		long n = 0;
